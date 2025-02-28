@@ -1,6 +1,14 @@
 
+
 ```powershell
-PS C:\Users\Lolban\Projects\SWoyo-testing> ./prism-cli-win.exe mock sms-platform.yaml
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+```powershell
+./prism-cli-win.exe mock sms-platform.yaml
+
 [14:57:47] » [CLI] ...  awaiting  Starting Prism…
 [14:57:47] » [CLI] i  info      POST       http://127.0.0.1:4010/send_sms
 [14:57:47] » [CLI] ►  start     Prism is listening on http://127.0.0.1:4010
@@ -11,7 +19,8 @@ PS C:\Users\Lolban\Projects\SWoyo-testing> ./prism-cli-win.exe mock sms-platform
 ```
 
 ```powershell
-PS C:\Users\Lolban\Projects\SWoyo-testing> python -m sms_client.cli --sender 123 --recipient 456 --message "Hello"
+python -m sms_client.cli --sender 123 --recipient 456 --message "Hello"
+
 Код ответа: 200
 Тело ответа: {"status":"success","message_id":"123456"}
 ```

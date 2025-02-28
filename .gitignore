@@ -1,3 +1,4 @@
 *.exe
 *.log
 __pycache__
+venv
